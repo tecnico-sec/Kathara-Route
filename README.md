@@ -5,40 +5,39 @@ LETI 2020/21 | Segurança Informática em Redes e Sistemas
 
 ## Objectivo
 
-O objectivo do guia consiste em tomar contacto com o sistema Netkit
+O objectivo do guia consiste em tomar contacto com o sistema Kathara
 através da configuração de uma rede simples.
 
-## Instalação do netkit
+## Instalação do kathara
 
-O netkit já está instalado nos PCs do laboratório, em Ubuntu GNU/Linux.
+O kathara já está instalado nos PCs do laboratório, em Ubuntu GNU/Linux.
 Para aceder aos PCs do laboratório deverá usar o *username* "seed" e a
 *password* "dees".
 
-Caso pretenda instalar o netkit no seu PC, pode corrê-lo directamente
+Caso pretenda instalar o kathara no seu PC, pode corrê-lo directamente
 sobre uma distribuição GNU/Linux ou através de uma máquina virtual com o
-mesmo sistema operativo. É necessário ter em conta que o netkit lança
+mesmo sistema operativo. É necessário ter em conta que o kathara lança
 várias máquinas virtuais (leves) pelo que se o correr dentro de uma
 máquina virtual, deve garantir que esta tem memória suficiente.
 
-Para instalar o netkit deve fazer o download da versão "Latest Stable
+Para instalar o kathara deve fazer o download da versão "Latest Stable
 Release" de
 
-> <http://wiki.netkit.org/index.php/Download_Official>
+> <https://www.kathara.org/#download>
 
 e seguir os passos indicados em
 
-> https://github.com/maxonthegit/netkit-core/blob/master/INSTALL 
+> https://github.com/KatharaFramework/Kathara/wiki
 
 ## Exercício 1
 
-O Netkit tem comandos para executar e terminar máquinas virtuais
+O Kathara tem comandos para executar e terminar máquinas virtuais
 individualmente, mas neste trabalho vamos lançar uma rede com várias
-componentes, definida no ficheiro *lab.conf*. O Netkit chama a uma
+componentes, definida no ficheiro *lab.conf*. O Kathara chama a uma
 configuração destas um "laboratório". Para executar e parar um
-laboratório executam-se respectivamente os comandos `lstart` e `lhalt`
-na directoria de trabalho (onde tem de estar o ficheiro *lab.conf*). O
-comando `lcrash` pode ser usado para forçar a paragem das máquinas,
-resultando no entanto em perda completa das alterações realizadas.
+laboratório executam-se respectivamente os comandos `lstart` e `lclean`
+na directoria de trabalho (onde tem de estar o ficheiro *lab.conf*). Pode-se
+usar comandos do [docker][6] para ou interagir com maquinas individuais. 
 
 Este laboratório usa vários comandos Linux. Caso precise de informação
 adicional sobre algum deles execute 
@@ -46,11 +45,11 @@ adicional sobre algum deles execute
 man [comando]
 ```
 
-Obtenha e descomprima o ficheiro *guia2.tgz* que contém um laboratório
-Netkit, usando o comando
+Obtenha e descomprima o ficheiro *guia.tgz* que contém um laboratório
+Kathara, usando o comando
 
 ```bash
-tar xzvf guia2.tgz
+tar xzvf guia.tgz
 ````
 
 Vamos considerar a seguinte topologia, com dois *routers* e dois
@@ -77,12 +76,12 @@ encaminhado cada pacote IP em função do seu endereço IP de destino.
     porque é que ele gera a rede com a topologia acima.
 
 3.  Execute o laboratório mudando para a directoria que contém o
-    ficheiro *lab.conf* e executando *lstart*. Observe o arranque das
-    quatro máquinas virtuais.
+    ficheiro *lab.conf* e executando `lstart` (ou `kathara.exe lstart` em
+     windows). Observe o arranque das quatro máquinas virtuais.
 
 4.  Cada *router* tem duas interfaces, eth0 e eth1. Execute o comando
-    *ip addr* nos *routers* e nos computadores e observe que as
-    interfaces de rede não estão configuradas (não aparecem).
+    `ip addr` nos *routers* e nos computadores e observe que as
+    interfaces de rede não estão configuradas.
 
 5.  Configure todas as interfaces usando os comandos
 
@@ -177,7 +176,7 @@ consigam comunicar (basta fazer *ping*).
 
 Referências
 
--   Netkit, [http://wiki.netkit.org/][3]
+-   Katara, [https://github.com/KatharaFramework/Kathara/wiki/][3]
 
 -   Linux Set Up routing with ip command -
     [http://www.cyberciti.biz/faq/howto-linux-configuring-default-route-with-ipcommand/][4]
@@ -185,8 +184,11 @@ Referências
 -   10 Useful "IP" Commands to Configure Network Interfaces -
     [http://www.tecmint.com/ip-command-examples/][5]
 
+-   Docker documentation, [https://docs.docker.com/][6]
+
   [1]: media/tecnico.jpeg
   [2]: media/topologia-de-rede.png 
-  [3]: http://wiki.netkit.org/
+  [3]: https://github.com/KatharaFramework/Kathara/wiki
   [4]: http://www.cyberciti.biz/faq/howto-linux-configuring-default-route-with-ipcommand/
   [5]: http://www.tecmint.com/ip-command-examples/
+  [6]: https://docs.docker.com/
