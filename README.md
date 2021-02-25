@@ -37,10 +37,10 @@ adicional sobre algum deles execute
 man [comando]
 ```
 
-Obtenha e descomprima o ficheiro *guia.tgz* que contém um laboratório Kathara, usando o comando
+Clone este repositorio git para a sua maquina
 
 ```bash
-tar xzvf guia.tgz
+git clone 'git@github.com:tecnico-sec/Kathara-Route.git'
 ````
 
 Vamos considerar a seguinte topologia, com dois *routers* e dois computadores:
