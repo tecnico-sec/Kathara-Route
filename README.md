@@ -136,7 +136,7 @@ Modifique os ficheiros necessários de modo a criar uma interface eth2 no *route
 Ligue-lhe um novo terminal *pc2*. 
 Arranque o laboratório e configure o *router* e o novo terminal de modo a que consigam comunicar (basta fazer *ping*).
 
-Referências
+## Referências
 
 -   Kathará, [https://github.com/KatharaFramework/Kathara/wiki/][3]
 
