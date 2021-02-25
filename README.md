@@ -2,7 +2,7 @@ Instituto Superior Técnico, Universidade de Lisboa
 
 **Segurança Informática em Redes e Sistemas**
 
-# Guia de Laboratório - NetKit-Route
+# Guia de Laboratório - *Network Routing*
 
 ## Objectivo
 
