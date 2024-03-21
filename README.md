@@ -30,8 +30,11 @@ e seguir os passos indicados em
 
 O *Kathará* tem comandos para executar e terminar máquinas virtuais individualmente, mas neste trabalho vamos lançar uma rede com várias componentes, definida no ficheiro `lab.conf`.
 O *Kathará* chama a uma configuração destas um "laboratório".
-Para executar e parar um laboratório executam-se respectivamente os comandos `lstart` e `lclean` na directoria de trabalho (onde tem de estar o ficheiro `lab.conf`).
-Podem-se usar comandos do [*Docker*][6] para interagir com máquinas individuais.
+
+Antes de executar o *Kathará* é preciso executar o *Docker*. Em Linux, pode verificar se o *Docker* já está em execução executando o comando `ps aux | grep dockerd`. 
+
+Para executar e parar um laboratório *Kathará* executam-se respectivamente os comandos `kathara lstart` e `kathara lclean` na directoria de trabalho (onde tem de estar o ficheiro `lab.conf`).
+Podem-se usar comandos do [*Docker*][6] para interagir com máquinas virtuais individuais.
 
 Este laboratório usa vários comandos *Linux*.
 Caso precise de informação adicional sobre algum deles, execute:
